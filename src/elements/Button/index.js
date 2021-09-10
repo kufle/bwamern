@@ -40,7 +40,7 @@ export default function Button(props) {
                     className={className.join(" ")} 
                     style={props.style} 
                     target={props.target === "_blank" ? "_blank" : undefined} 
-                    rel={props.target === "_blank" ? "noopener noreferrer":undefined}>{props.children}</a>
+                    rel={props.target === "_blank" ? "noopener noreferrer" : undefined}>{props.children}</a>
             );
         }else {
             return(
@@ -54,7 +54,7 @@ export default function Button(props) {
             )
         }
     }
-    return <Button className={className.join(" ")} style={props.style} onClick={onClick}>{props.children}</Button>;
+    return <button className={className.join(" ")} style={props.style} onClick={onClick}>{props.children}</button>;
 }
 
 Button.propTypes = {
@@ -69,5 +69,6 @@ Button.propTypes = {
     isLarge: propTypes.bool,
     isBlock: propTypes.bool,
     hasShadow: propTypes.bool,
-    isExternal: propTypes.bool
+    isExternal: propTypes.bool,
+    isPrimary: propTypes.bool
 }
