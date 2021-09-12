@@ -58,7 +58,7 @@ export default function Hero(props) {
                 
                 <div className="col-lg-7">
                     <div className="image-hero">
-                        <img src={ImgHero} alt="Beautiful Place" className="img-fluid position-absolute"/>
+                        <img src={ImgHero} alt="Beautiful Place" className="img-fluid"/>
                     </div>
                 </div>
             </div>

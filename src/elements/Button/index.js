@@ -32,16 +32,27 @@ export default function Button(props) {
         );
     }
 
+    //Jika tipe nya link maka tag elementnnya a
     if(props.type === "link"){
         if(props.isExternal) {
-            return(
-                <a 
-                    href={props.href} 
-                    className={className.join(" ")} 
-                    style={props.style} 
-                    target={props.target === "_blank" ? "_blank" : undefined} 
-                    rel={props.target === "_blank" ? "noopener noreferrer" : undefined}>{props.children}</a>
-            );
+            if(props.target === "_blank"){
+                return(
+                    <a 
+                        href={props.href} 
+                        className={className.join(" ")} 
+                        style={props.style} 
+                        target="_blank"
+                        rel="noopener noreferrer">{props.children}</a>
+                );
+            }else {
+                return(
+                    <a 
+                        href={props.href} 
+                        className={className.join(" ")} 
+                        style={props.style} >{props.children}</a>
+                );
+            }
+            
         }else {
             return(
                 <Link to={props.href}
